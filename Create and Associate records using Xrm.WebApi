@@ -1,0 +1,42 @@
+var scripting = {
+    recordCreation: function () {
+        var data = {
+            "name": "CRAYONS LTD.",
+            "description": "This Account is Created using a Web API",
+            "creditonhold": false,
+            "telephone1": "9954565154",
+            "address1_city": "Mumbai",
+
+            "primarycontactid": {
+                "firstname": "Clinton",
+                "lastname": "Dmello"
+            },
+
+            "opportunity_customer_accounts": [
+                {
+                    "name": "Opportunity Associated to CRAYONS LTD.",
+                    "Opportunity_Tasks": [
+                        { "subject": "Task Created" }
+                    ],
+                    "Opportunity_Annotation": [
+                        {
+                            "subject": "Note Created",     
+                        }
+                    ]
+                }
+            ]
+        }
+        Xrm.WebApi.createRecord("account", data).then(
+
+            function success(result) {
+                console.log("Account Created with ID" + result.id);
+                //perform operations on record creation
+
+           },
+            function (error) {
+                console.log(error.message);
+            }
+        );
+
+    }
+};
