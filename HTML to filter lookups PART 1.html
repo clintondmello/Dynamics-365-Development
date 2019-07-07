@@ -1,0 +1,44 @@
+<html><head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Below mentioned are the Online Web Reference files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+    <!-- Below mentioned are the CRM Reference files based on the hierarchy of Webresources created, the bottom two referecnce will change according to your folder structure for Webresoruces in CRM-->
+    <script src="../../../../ClientGlobalContext.js.aspx" type="text/javascript"></script>
+    <script src="../BusinessLayer/SafetyInspectionCustomization.js" type="text/javascript"></script>
+    
+    <meta>
+    <style>
+        #jumbo {
+            padding: 3px;
+        }
+    </style>
+<meta><meta></head>
+<body style="overflow-wrap: break-word;">
+    <div class="jumbotron text-center" id="jumbo">
+        <h3>Safety Inspection Register</h3>
+        <div class="container">
+            <div class="col-sm-4">
+                <input class="form-control" id="selectedProject" type="text" placeholder="Select Project" readonly="">
+            </div>
+            <div class="col-sm-1">
+                <!-- OnClick we call a function and the code for that is present in another file which has not been included-->
+                <!-- You can add your own functions on click-->
+                <button type="button" class="btn btn-primary" onclick="SafetyInspectionCustomization.selectProject()">Project</button>
+            </div>
+            <div class="col-sm-4">
+                <!-- OnClick we call a function and the code for that is present in another file which has not been included-->
+                <!-- You can add your own functions on click-->
+                <input class="form-control" id="selectedProjectRelatedLayout" type="text" placeholder="Select Layout" readonly="">
+            </div>
+            <div class="col-sm-1">
+                <button type="button" class="btn btn-primary" onclick="SafetyInspectionCustomization.selectProjectLayout()">Layout</button>
+            </div>
+        </div>
+    </div>
+</body></html>
